@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Panther</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap">
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-size: 24px; 
+            font-family: 'Anonymous Pro', monospace;
+            margin: 10px; 
+            font-weight: 400;
+        }
+
+        div {
+            margin-bottom: 8px; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>Initializing Hacking...</div>
+    <script>
+
+        const addItem = async (item) => {
+            await randomDelay();
+            let div = document.createElement("div");
+            div.innerHTML = item;
+            document.body.append(div);
+        }
+
+        const randomDelay = () => {
+            return new Promise((resolve, reject) => {
+                timeout = 0.5 + 2 * Math.random(); /* Made the delay shorter for a faster pace */
+                setTimeout(() => {
+                    resolve();
+                }, timeout * 1000);
+            })
+        }
+
+        async function main() {
+
+            let t = setInterval(() => {
+                let last = document.body.getElementsByTagName("div");
+                last = last[last.length - 1];
+                if (last.innerHTML.endsWith("...")) {
+                    last.innerHTML = last.innerHTML.slice(0, last.innerHTML.length - 3);
+                }
+                else {
+                    last.innerHTML = last.innerHTML + ".";
+                }
+
+            }, 50); /* Decreased the interval for a faster animation */
+
+            let text = ["Now We Hacking your data",
+                "Reading your files",
+                "Password files Detected",
+                "Sending all passwords and personal files to server",
+                "Cleaning up",
+                "Activating the virtual confetti cannon surprise celebration mode engaged!",
+                "Installing a laugh track to your desktop because every click deserves applause.",
+                "Uploading a temporary '404 Error' on your screen just testing your error-handling skills!",
+                "Convincing your antivirus that your cat is a malware expert. Meow-she's on the case!",
+                "Initiating 'Gravity Swap' mode because who needs a right-side-up desktop anyway?",
+                "Translating all your files into emoji language  because communication is key, even in pictures!",
+                "Implementing 'Auto-Spellcheck for Cats' feline-friendly emails coming right up!",
+                "Enabling 'Quantum Speed Browsing' be prepared for internet explorer at warp speed!",
+                "Randomly rearranging desktop icons just a friendly reminder that change is constant.",
+                "Activating 'Auto-Dad Joke Generator' brace yourself for puns at every click!",
+                "Switching mouse buttons for chaos",
+                "Pixelating your screen for art",
+                "Keyboard now types in emojis",
+                "Launching virtual fireworks on desktop",
+                "Installing disco lights in documents",
+                "Mouse cursor on a joyride",
+                "Screen is now in stealth mode",
+                "Desktop now speaks binary language",
+                "Auto-correct set to Shakespearean insults",
+                "Files on vacation back never",
+                "THANK YOU SO MUCH",
+                "Uploading glitter, because life needs more sparkle",
+                "Renaming all folders to 'Invisible Unicorn Memos",
+                "Enabling 'Morse Code Mode' for secret communication",
+                "Setting desktop icons to do the Macarena",
+                "Initiating 'Virtual Tea Time' for a soothing break",
+                "Turning your desktop into a disco inferno",
+                "Applying a temporary 'Gravity Challenge' to your cursor",
+                "Randomizing font styles for a typographic adventure",
+                "Teaching your computer to respond in pirate language",
+                "Activating 'Quantum Leap' your files now time travel.",
+                "Now Your Operating System is Under suspection"];
+
+            for (const item of text) {
+                await addItem(item);
+            }
+
+            await randomDelay();
+            clearInterval(t);
+        }
+        main();
+
+    </script>
+</body>
+
+</html>
